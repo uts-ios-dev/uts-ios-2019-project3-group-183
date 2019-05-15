@@ -1,3 +1,3 @@
 # Project 3
 
-Populate this README.md file with relevant information about your project.
+Richard Christiansen 12730988
