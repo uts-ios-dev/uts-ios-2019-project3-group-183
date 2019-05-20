@@ -14,6 +14,7 @@
 		2268F62722916FAB0038342B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2268F62522916FAB0038342B /* LaunchScreen.storyboard */; };
 		2268F630229174470038342B /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2268F62F229174470038342B /* BrowseViewController.swift */; };
 		2268F632229174740038342B /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2268F631229174740038342B /* AnalysisViewController.swift */; };
+		2268F634229309400038342B /* CryptoHoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2268F633229309400038342B /* CryptoHoldingCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		2268F62822916FAB0038342B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2268F62F229174470038342B /* BrowseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
 		2268F631229174740038342B /* AnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisViewController.swift; sourceTree = "<group>"; };
+		2268F633229309400038342B /* CryptoHoldingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoHoldingCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				2268F62E2291741C0038342B /* View Controllers */,
+				2268F635229309590038342B /* Models */,
 				2268F61C22916FAA0038342B /* AppDelegate.swift */,
 				2268F62022916FAA0038342B /* Main.storyboard */,
 				2268F62322916FAB0038342B /* Assets.xcassets */,
@@ -76,6 +79,14 @@
 				2268F631229174740038342B /* AnalysisViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		2268F635229309590038342B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2268F633229309400038342B /* CryptoHoldingCell.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2268F630229174470038342B /* BrowseViewController.swift in Sources */,
+				2268F634229309400038342B /* CryptoHoldingCell.swift in Sources */,
 				2268F61F22916FAA0038342B /* PortfolioViewController.swift in Sources */,
 				2268F632229174740038342B /* AnalysisViewController.swift in Sources */,
 				2268F61D22916FAA0038342B /* AppDelegate.swift in Sources */,
