@@ -7,10 +7,20 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class BrowseViewController: UIViewController {
 
     override func viewDidLoad() {
+        Alamofire.request("https://api.coincap.io/v2/assets").responseJSON { (responseData) -> Void in
+            if((responseData.result.value) != nil) {
+                let swiftyJsonVar = JSON(responseData.result.value!)
+                print(swiftyJsonVar["data"][0]["name"])
+            }
+        }
+        print("hello")
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

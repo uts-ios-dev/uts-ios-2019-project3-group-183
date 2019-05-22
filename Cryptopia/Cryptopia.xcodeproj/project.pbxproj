@@ -15,6 +15,7 @@
 		2268F630229174470038342B /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2268F62F229174470038342B /* BrowseViewController.swift */; };
 		2268F632229174740038342B /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2268F631229174740038342B /* AnalysisViewController.swift */; };
 		2268F634229309400038342B /* CryptoHoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2268F633229309400038342B /* CryptoHoldingCell.swift */; };
+		D121691B0451C604AE241006 /* Pods_Cryptopia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DCCC89921B497DDEDC742B /* Pods_Cryptopia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,9 @@
 		2268F62F229174470038342B /* BrowseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
 		2268F631229174740038342B /* AnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisViewController.swift; sourceTree = "<group>"; };
 		2268F633229309400038342B /* CryptoHoldingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoHoldingCell.swift; sourceTree = "<group>"; };
+		2416866D808A9678DDA023F3 /* Pods-Cryptopia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptopia.debug.xcconfig"; path = "Target Support Files/Pods-Cryptopia/Pods-Cryptopia.debug.xcconfig"; sourceTree = "<group>"; };
+		80FD53DEF98D277C192F91E3 /* Pods-Cryptopia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptopia.release.xcconfig"; path = "Target Support Files/Pods-Cryptopia/Pods-Cryptopia.release.xcconfig"; sourceTree = "<group>"; };
+		D2DCCC89921B497DDEDC742B /* Pods_Cryptopia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptopia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D121691B0451C604AE241006 /* Pods_Cryptopia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,8 @@
 			children = (
 				2268F61B22916FAA0038342B /* Cryptopia */,
 				2268F61A22916FAA0038342B /* Products */,
+				62800511DF4ECCB63F0C4E0D /* Pods */,
+				A348B9FC56A0D37A636018B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +96,23 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		62800511DF4ECCB63F0C4E0D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2416866D808A9678DDA023F3 /* Pods-Cryptopia.debug.xcconfig */,
+				80FD53DEF98D277C192F91E3 /* Pods-Cryptopia.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A348B9FC56A0D37A636018B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2DCCC89921B497DDEDC742B /* Pods_Cryptopia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -96,9 +120,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2268F62B22916FAB0038342B /* Build configuration list for PBXNativeTarget "Cryptopia" */;
 			buildPhases = (
+				90F89E49F89522B4FB8EC6BF /* [CP] Check Pods Manifest.lock */,
 				2268F61522916FAA0038342B /* Sources */,
 				2268F61622916FAA0038342B /* Frameworks */,
 				2268F61722916FAA0038342B /* Resources */,
+				74AFAD180CCF0EA3018002A4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +180,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74AFAD180CCF0EA3018002A4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cryptopia/Pods-Cryptopia-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cryptopia/Pods-Cryptopia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90F89E49F89522B4FB8EC6BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cryptopia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2268F61522916FAA0038342B /* Sources */ = {
@@ -308,9 +383,11 @@
 		};
 		2268F62C22916FAB0038342B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2416866D808A9678DDA023F3 /* Pods-Cryptopia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Cryptopia/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -326,9 +403,11 @@
 		};
 		2268F62D22916FAB0038342B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80FD53DEF98D277C192F91E3 /* Pods-Cryptopia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Cryptopia/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
