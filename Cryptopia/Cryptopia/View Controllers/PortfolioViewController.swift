@@ -10,10 +10,10 @@ import UIKit
 
 class PortfolioViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let name = ["Bitcoin", "Litecoin"]
-    let price = ["0.18 BTC", "0.1 LTC"]
-    let priceGrowth = [111, 123]
-    let worthinAUD = [1111, 14124]
+    var name = ["Bitcoin", "Litecoin"]
+    var price = ["0.18 BTC", "0.1 LTC"]
+    var priceGrowth = [111, 123]
+    var worthinAUD = [1111, 14124]
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -25,6 +25,11 @@ class PortfolioViewController: UIViewController, UITableViewDelegate, UITableVie
     }
 
     override func viewDidAppear(_ animated: Bool) {
+        name.append("Test")
+        price.append("1234")
+        priceGrowth.append(1112)
+        worthinAUD.append(121313)
+        
         tableView.reloadData()
     }
     
@@ -37,18 +42,18 @@ class PortfolioViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let bitcoin = tableView.dequeueReusableCell(withIdentifier: "Bitcoin", for: indexPath)
-        let nameCell: UILabel = bitcoin.viewWithTag(1) as! UILabel
-        let priceCell: UILabel = bitcoin.viewWithTag(2) as! UILabel
-        let priceGrowthCell: UILabel = bitcoin.viewWithTag(3) as! UILabel
-        let worthinAUDCell: UILabel = bitcoin.viewWithTag(4) as! UILabel
+        let crypto = tableView.dequeueReusableCell(withIdentifier: "Bitcoin", for: indexPath)
+        let nameCell: UILabel = crypto.viewWithTag(1) as! UILabel
+        let priceCell: UILabel = crypto.viewWithTag(2) as! UILabel
+        let priceGrowthCell: UILabel = crypto.viewWithTag(3) as! UILabel
+        let worthinAUDCell: UILabel = crypto.viewWithTag(4) as! UILabel
         
         nameCell.text = name[indexPath.item]
         priceCell.text = price[indexPath.item]
         priceGrowthCell.text = "$AU\(priceGrowth[indexPath.item])"
         worthinAUDCell.text = "$AU \(worthinAUD[indexPath.item])"
         
-        return bitcoin
+        return crypto
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
