@@ -69,8 +69,8 @@
 		2268F61B22916FAA0038342B /* Cryptopia */ = {
 			isa = PBXGroup;
 			children = (
-				2268F62E2291741C0038342B /* View Controllers */,
 				2268F635229309590038342B /* Models */,
+				2268F62E2291741C0038342B /* View Controllers */,
 				2268F61C22916FAA0038342B /* AppDelegate.swift */,
 				2268F62022916FAA0038342B /* Main.storyboard */,
 				2268F62322916FAB0038342B /* Assets.xcassets */,
