@@ -7,4 +7,5 @@ target 'Cryptopia' do
     # Pods for Cryptopia
     pod 'Alamofire'
     pod 'SwiftyJSON'
+    pod 'MJExtension'
 end
