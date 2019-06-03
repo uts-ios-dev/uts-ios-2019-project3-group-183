@@ -337,28 +337,90 @@
                                     <constraint firstItem="0nV-qa-8pt" firstAttribute="leading" secondItem="dnM-sT-MgP" secondAttribute="leading" constant="8" id="ocT-gf-sMm"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmb-xb-m2V">
-                                <rect key="frame" x="0.0" y="114" width="414" height="699"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                            </scrollView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8nL-oS-pNa">
+                                <rect key="frame" x="0.0" y="122" width="414" height="691"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Bitcoin" id="eIZ-ca-pLf">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eIZ-ca-pLf" id="ivG-QD-5Xl">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GtS-SD-oze">
+                                                    <rect key="frame" x="8" y="7" width="36" height="36"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="36" id="51F-UJ-h1P"/>
+                                                        <constraint firstAttribute="width" secondItem="GtS-SD-oze" secondAttribute="height" multiplier="1:1" id="6hx-ir-YD8"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ito-ls-iaY">
+                                                    <rect key="frame" x="52" y="3" width="55" height="28"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.18 BTC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJh-4i-2eQ">
+                                                    <rect key="frame" x="52" y="25" width="54" height="21.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="▲ $A364.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPF-yH-XA9">
+                                                    <rect key="frame" x="306" y="3" width="100" height="28"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                                    <color key="textColor" red="0.0090441411460000006" green="0.80652783480000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$A1,300.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zda-N1-KA2">
+                                                    <rect key="frame" x="334.5" y="25" width="71.5" height="21.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="13"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="nJh-4i-2eQ" secondAttribute="bottom" constant="3" id="82a-Hr-PqP"/>
+                                                <constraint firstItem="zda-N1-KA2" firstAttribute="top" secondItem="nJh-4i-2eQ" secondAttribute="top" id="ABg-es-6Di"/>
+                                                <constraint firstItem="zda-N1-KA2" firstAttribute="leading" relation="lessThanOrEqual" secondItem="nJh-4i-2eQ" secondAttribute="trailing" constant="239" id="Axr-4G-08z"/>
+                                                <constraint firstItem="GtS-SD-oze" firstAttribute="centerY" secondItem="ivG-QD-5Xl" secondAttribute="centerY" id="D9H-ab-7uw"/>
+                                                <constraint firstItem="ito-ls-iaY" firstAttribute="leading" secondItem="GtS-SD-oze" secondAttribute="trailing" constant="8" id="JOQ-CQ-ezH"/>
+                                                <constraint firstItem="zda-N1-KA2" firstAttribute="bottom" secondItem="nJh-4i-2eQ" secondAttribute="bottom" id="Zdw-8f-eRR"/>
+                                                <constraint firstItem="nJh-4i-2eQ" firstAttribute="top" secondItem="ivG-QD-5Xl" secondAttribute="top" constant="25" id="cZq-bH-iTU"/>
+                                                <constraint firstItem="GtS-SD-oze" firstAttribute="leading" secondItem="ivG-QD-5Xl" secondAttribute="leading" constant="8" id="eUH-hL-Pz2"/>
+                                                <constraint firstAttribute="trailing" secondItem="zda-N1-KA2" secondAttribute="trailing" constant="8" id="gF2-aR-0Fo"/>
+                                                <constraint firstItem="nJh-4i-2eQ" firstAttribute="leading" secondItem="GtS-SD-oze" secondAttribute="trailing" constant="8" id="hKI-ZS-xbQ"/>
+                                                <constraint firstItem="hPF-yH-XA9" firstAttribute="bottom" secondItem="ito-ls-iaY" secondAttribute="bottom" id="jCx-NC-vds"/>
+                                                <constraint firstItem="hPF-yH-XA9" firstAttribute="top" secondItem="ito-ls-iaY" secondAttribute="top" id="jlX-Ar-tSY"/>
+                                                <constraint firstItem="hPF-yH-XA9" firstAttribute="leading" relation="lessThanOrEqual" secondItem="ito-ls-iaY" secondAttribute="trailing" constant="244" id="rDv-el-SSp"/>
+                                                <constraint firstAttribute="bottom" secondItem="ito-ls-iaY" secondAttribute="bottom" constant="18.5" id="rHr-ds-rkf"/>
+                                                <constraint firstItem="ito-ls-iaY" firstAttribute="top" secondItem="ivG-QD-5Xl" secondAttribute="top" constant="3" id="v1A-7V-6EP"/>
+                                                <constraint firstAttribute="trailing" secondItem="hPF-yH-XA9" secondAttribute="trailing" constant="8" id="vsx-wz-Whx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hmb-xb-m2V" firstAttribute="bottom" secondItem="SWb-wb-ZtQ" secondAttribute="bottom" id="0Ra-xN-1w2"/>
-                            <constraint firstItem="hmb-xb-m2V" firstAttribute="top" secondItem="dnM-sT-MgP" secondAttribute="bottom" id="4JO-uD-g9o"/>
-                            <constraint firstItem="hmb-xb-m2V" firstAttribute="leading" secondItem="SWb-wb-ZtQ" secondAttribute="leading" id="4SV-p5-e8k"/>
                             <constraint firstItem="dnM-sT-MgP" firstAttribute="leading" secondItem="SWb-wb-ZtQ" secondAttribute="leading" id="ZkU-6U-S4S"/>
-                            <constraint firstItem="hmb-xb-m2V" firstAttribute="trailing" secondItem="SWb-wb-ZtQ" secondAttribute="trailing" id="jaI-er-4FS"/>
                             <constraint firstItem="dnM-sT-MgP" firstAttribute="trailing" secondItem="SWb-wb-ZtQ" secondAttribute="trailing" id="v5o-XX-vF6"/>
                             <constraint firstItem="dnM-sT-MgP" firstAttribute="top" secondItem="SWb-wb-ZtQ" secondAttribute="top" id="vk8-ne-f3K"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SWb-wb-ZtQ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Browse" id="9ON-vq-kCk"/>
+                    <connections>
+                        <outlet property="tableView" destination="8nL-oS-pNa" id="XQO-ys-d6b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="msZ-Qa-n8s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1610" y="139"/>
+            <point key="canvasLocation" x="1608.6956521739132" y="138.61607142857142"/>
         </scene>
         <!--Analysis-->
         <scene sceneID="daU-QC-BmL">
