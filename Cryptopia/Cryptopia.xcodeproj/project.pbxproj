@@ -76,7 +76,6 @@
 			children = (
 				32DFF2FA22A024BD001D32C4 /* Views */,
 				32DFF2F722A01D5F001D32C4 /* Utils */,
-				2268F62E2291741C0038342B /* View Controllers */,
 				2268F635229309590038342B /* Models */,
 				2268F61C22916FAA0038342B /* AppDelegate.swift */,
 				2268F62022916FAA0038342B /* Main.storyboard */,
@@ -86,16 +85,6 @@
 				32DFF2FD22A03081001D32C4 /* Cryptopia-Bridging-Header.h */,
 			);
 			path = Cryptopia;
-			sourceTree = "<group>";
-		};
-		2268F62E2291741C0038342B /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				2268F61E22916FAA0038342B /* PortfolioViewController.swift */,
-				2268F62F229174470038342B /* BrowseViewController.swift */,
-				2268F631229174740038342B /* AnalysisViewController.swift */,
-			);
-			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		2268F635229309590038342B /* Models */ = {
@@ -118,6 +107,9 @@
 		32DFF2FA22A024BD001D32C4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2268F61E22916FAA0038342B /* PortfolioViewController.swift */,
+				2268F62F229174470038342B /* BrowseViewController.swift */,
+				2268F631229174740038342B /* AnalysisViewController.swift */,
 				32DFF2FB22A024D3001D32C4 /* BrowseListCell.swift */,
 			);
 			path = Views;
