@@ -1,7 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,15 +14,49 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="erV-M8-jS1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Kno-q9-Kfp">
+                                <rect key="frame" x="20" y="261" width="374" height="374"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Kno-q9-Kfp" secondAttribute="height" multiplier="1:1" id="rq0-8p-OX9"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cryptopia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8t1-ru-2dG">
+                                <rect key="frame" x="100" y="635" width="214" height="72.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="50"/>
+                                <color key="textColor" red="0.87806242704391479" green="0.43925550580024719" blue="9.1997419076506048e-05" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="0.52081549657534243" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="3" height="4"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="erV-M8-jS1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1qv-Qt-hPe"/>
+                            <constraint firstItem="Kno-q9-Kfp" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" id="3L2-32-ZW4"/>
+                            <constraint firstItem="8t1-ru-2dG" firstAttribute="top" secondItem="Kno-q9-Kfp" secondAttribute="bottom" id="Igi-hm-fCr"/>
+                            <constraint firstItem="8t1-ru-2dG" firstAttribute="centerX" secondItem="Kno-q9-Kfp" secondAttribute="centerX" id="LT2-e1-vEK"/>
+                            <constraint firstItem="erV-M8-jS1" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="R0F-q4-Hda"/>
+                            <constraint firstItem="erV-M8-jS1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Rr4-xE-Abc"/>
+                            <constraint firstItem="Kno-q9-Kfp" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="fZ6-cX-b2f"/>
+                            <constraint firstAttribute="bottom" secondItem="erV-M8-jS1" secondAttribute="bottom" id="uqV-iI-azB"/>
+                            <constraint firstAttribute="trailing" secondItem="Kno-q9-Kfp" secondAttribute="trailing" constant="20" id="vne-47-PLN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="1563" height="3384"/>
+        <image name="Icon" width="1024" height="1024"/>
+    </resources>
 </document>
