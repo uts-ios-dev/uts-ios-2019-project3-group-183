@@ -20,9 +20,14 @@ class PortfolioViewController: UIViewController, UITableViewDelegate, UITableVie
     var dataArray1:JSON?
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var logoutButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nameLabel.text = "Welcome, \(UserDefaults.standard.string(forKey: "Username") ?? "User")"
+        
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
@@ -66,6 +71,14 @@ class PortfolioViewController: UIViewController, UITableViewDelegate, UITableVie
                 self.tableView.reloadData()
             }
         }
+    
+    @IBAction func logout(_ sender: UIButton) {
+        UserDefaults.standard.set(false, forKey: "Login")
+        UserDefaults.standard.removeObject(forKey: "Username")
+    }
+    
+    
+    //-MARK TABLE VIEW RELATED FUNCTIONS-//
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
