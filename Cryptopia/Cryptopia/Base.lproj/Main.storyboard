@@ -9,6 +9,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--LoginScreen-->
+        <scene sceneID="hUd-tt-jln">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LoginScreen" id="fxq-xC-jsZ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NXr-fZ-ScM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="887" y="-280"/>
+        </scene>
         <!--Portfolio-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -17,7 +25,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9g3-c4-BOT">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9g3-c4-BOT" userLabel="Info View">
                                 <rect key="frame" x="0.0" y="44" width="414" height="69"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Portfolio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cR-G7-6h5">
@@ -26,21 +34,41 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="highlightedColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eg0-PM-XRu">
+                                        <rect key="frame" x="8" y="71" width="139" height="24"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xwe-fg-MOG">
+                                        <rect key="frame" x="316" y="20" width="88" height="47"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        <size key="titleShadowOffset" width="1" height="2"/>
+                                        <state key="normal" title="Logout">
+                                            <color key="titleShadowColor" white="1" alpha="0.50623394691780821" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zBD-3O-Rh5"/>
+                                            <segue destination="fxq-xC-jsZ" kind="showDetail" id="pJ1-5h-9dV"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="5cR-G7-6h5" secondAttribute="bottom" constant="8" id="0qt-af-RxM"/>
                                     <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="5cR-G7-6h5" secondAttribute="trailing" constant="310" id="76D-wf-TGB"/>
+                                    <constraint firstItem="Xwe-fg-MOG" firstAttribute="centerY" secondItem="5cR-G7-6h5" secondAttribute="centerY" id="AfH-EV-w9v"/>
+                                    <constraint firstItem="Eg0-PM-XRu" firstAttribute="leading" secondItem="5cR-G7-6h5" secondAttribute="leading" id="Bys-qf-1IV"/>
+                                    <constraint firstItem="Eg0-PM-XRu" firstAttribute="top" secondItem="5cR-G7-6h5" secondAttribute="bottom" constant="10" id="Wf1-Ql-p5m"/>
+                                    <constraint firstItem="Xwe-fg-MOG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5cR-G7-6h5" secondAttribute="trailing" constant="50" id="Wnf-U5-qSu"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Eg0-PM-XRu" secondAttribute="trailing" constant="200" id="c60-Ip-AgA"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xwe-fg-MOG" secondAttribute="trailing" constant="10" id="orU-pt-hsO"/>
                                     <constraint firstItem="5cR-G7-6h5" firstAttribute="top" secondItem="9g3-c4-BOT" secondAttribute="top" constant="26" id="sON-hX-vP4"/>
                                     <constraint firstItem="5cR-G7-6h5" firstAttribute="leading" secondItem="9g3-c4-BOT" secondAttribute="leading" constant="8" id="wpC-Ia-fYE"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L6r-aS-uOz">
-                                <rect key="frame" x="0.0" y="113" width="414" height="253"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                            </scrollView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" delaysContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="6" allowsSelection="NO" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mJT-w9-HnC">
-                                <rect key="frame" x="0.0" y="366" width="414" height="447"/>
+                                <rect key="frame" x="0.0" y="213" width="414" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CryptocurrencyCell" id="aId-6z-jr6">
@@ -108,22 +136,20 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="L6r-aS-uOz" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" multiplier="0.45" id="1w4-LC-dA1"/>
-                            <constraint firstItem="L6r-aS-uOz" firstAttribute="top" secondItem="9g3-c4-BOT" secondAttribute="bottom" id="2g6-y3-o8a"/>
-                            <constraint firstItem="L6r-aS-uOz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5oU-QR-pH5"/>
-                            <constraint firstItem="mJT-w9-HnC" firstAttribute="top" secondItem="L6r-aS-uOz" secondAttribute="bottom" id="6ci-uc-dX1"/>
                             <constraint firstItem="mJT-w9-HnC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7sJ-iw-uBr"/>
                             <constraint firstItem="mJT-w9-HnC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9js-J6-J3y"/>
                             <constraint firstItem="mJT-w9-HnC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="T2R-jA-ePF"/>
                             <constraint firstItem="9g3-c4-BOT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="W9U-b0-fCQ"/>
                             <constraint firstItem="9g3-c4-BOT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WVJ-sM-8ul"/>
                             <constraint firstItem="9g3-c4-BOT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="chT-ZA-4IX"/>
-                            <constraint firstItem="L6r-aS-uOz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ehb-NU-Gfy"/>
+                            <constraint firstItem="mJT-w9-HnC" firstAttribute="top" secondItem="9g3-c4-BOT" secondAttribute="bottom" constant="100" id="lgS-e8-Vmb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Portfolio" image="home" selectedImage="home" id="ekL-CB-uc7"/>
                     <connections>
+                        <outlet property="logoutButton" destination="Xwe-fg-MOG" id="3Ch-Dv-YJh"/>
+                        <outlet property="nameLabel" destination="Eg0-PM-XRu" id="7bQ-db-onK"/>
                         <outlet property="tableView" destination="mJT-w9-HnC" id="NKu-JL-BEj"/>
                     </connections>
                 </viewController>
