@@ -12,6 +12,7 @@ import SwiftyJSON
 
 class PortfolioViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    /*Demo variables*/
     let name = ["Bitcoin", "Litecoin", "Ethereum"]
     var price: [Float] = [0.18, 0.10, 0.50]
     let currencyAcronym = ["BTC", "LTC", "ETH"]
@@ -32,17 +33,19 @@ class PortfolioViewController: UIViewController, UITableViewDelegate, UITableVie
         self.tableView.delegate = self
         
         Alamofire.request("https://api.coincap.io/v2/assets").responseJSON {
+            //This will update the priceGrowth and worthinAUD data
             (responseData) -> Void in
             //Updates currency
             if((responseData.result.value) != nil) {
                 let swiftyJsonVar = JSON(responseData.result.value!)
                 let jsonObj:JSON = swiftyJsonVar["data"];
+                //Creates a array instance from the parsed JSON object.
                 self.dataArray1 = jsonObj
                 
                 for index in 0...self.name.count-1 {
-                    
+                    //Loops for every array index
                     var dataIndex: Int = 0
-        
+                    
                     for i in 0...self.dataArray1!.count-1 {
                         let indexedString = self.dataArray1![i]["name"].string
                         
@@ -52,28 +55,33 @@ class PortfolioViewController: UIViewController, UITableViewDelegate, UITableVie
                         }
                     }
                     
-                    let data:JSON = self.dataArray1![dataIndex];
+                    let data:JSON = self.dataArray1![dataIndex]; //Creates an instance of the indexed cryptocurrency data
                     
-                    let usdPrice = data["priceUsd"].string ?? "0.00"
+                    /*Variables related to money worth*/
+                    let usdPrice = data["priceUsd"].string ?? "0.00" //Parses the current currency worth in USD
                     let USDPriceFloat = Float(usdPrice) //Converts the string to a float
-                    let worthInUSD = self.price[index] * USDPriceFloat!
+                    let worthInUSD = self.price[index] * USDPriceFloat! //Converts the user's owned currency to USD
                     
-                    let change:String = data["changePercent24Hr"].string!
-                    let changeFloat = Float(change)!
+                    /*Variables related to currency growth rate*/
+                    let change:String = data["changePercent24Hr"].string! //Parses the currency's recent growth rate
+                    let changeFloat = Float(change)! //Converts the string into a float
                     
-                    let AUDWorth = Double(round(100*Double(worthInUSD) * 1.43)/100) //Converts to AUD
-                    self.worthinAUD[index] = AUDWorth
+                    let AUDWorth = Double(round(100*Double(worthInUSD) * 1.43)/100) //Converts the money to AUD
+                    self.worthinAUD[index] = AUDWorth //Saves the value to the worthinAUD array
                     
                     let priceGrowthInAUD =  Double(round(100*Double(self.worthinAUD[index] * Double(changeFloat)))/100)
-                    self.priceGrowth[index] = priceGrowthInAUD
+                    self.priceGrowth[index] = priceGrowthInAUD //Saves the value to the priceGrowthInAUD array
                     }
                 }
+                //After the currency update is done, reloads the table data.
                 self.tableView.reloadData()
             }
         }
     
     @IBAction func logout(_ sender: UIButton) {
+        //Sets a flag that tells the app that the user is currently logged out
         UserDefaults.standard.set(false, forKey: "Login")
+        //Removes the user name from the setting
         UserDefaults.standard.removeObject(forKey: "Username")
     }
     
@@ -99,10 +107,14 @@ class PortfolioViewController: UIViewController, UITableViewDelegate, UITableVie
         
         currencyNameLabel.text = name[indexPath.item]
         currencyPriceLabel.text = "\(price[indexPath.item]) \(currencyAcronym[indexPath.item])"
+        
+        //Changes the text formatting based on the currency growth.
         if (priceGrowth[indexPath.item] > 0) {
+            //Green color during positive growth
             priceGrowthLabel.text = "▲ $AU\(priceGrowth[indexPath.item])"
             priceGrowthLabel.textColor = UIColor.init(red:0.01, green:0.81, blue:0.00, alpha:1.0)
         } else if (priceGrowth[indexPath.item] < 0) {
+            //Red color during negative growth
             priceGrowthLabel.text = "▼ $AU \(priceGrowth[indexPath.item])"
             priceGrowthLabel.textColor = UIColor.init(red:0.76, green:0.23, blue:0.13, alpha:1.0)
         }
@@ -112,6 +124,7 @@ class PortfolioViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        //Changes the name of the table header
         return "Owned currencies"
     }
 }
