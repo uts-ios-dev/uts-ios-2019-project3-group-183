@@ -9,10 +9,7 @@
 import Foundation
 import UIKit
 
-struct CryptocurrencyType {
-    let image: UIImage
-    let name: String
-    let price: String
+struct CurrencyData: Codable {
     let priceGrowth: Double
     let worthInAUD: Double
 }

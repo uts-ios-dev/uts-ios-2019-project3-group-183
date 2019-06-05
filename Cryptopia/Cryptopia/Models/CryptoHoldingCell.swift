@@ -9,7 +9,6 @@
 import UIKit
 
 class CryptoHoldingCell: UITableViewCell {
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +19,4 @@ class CryptoHoldingCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }
