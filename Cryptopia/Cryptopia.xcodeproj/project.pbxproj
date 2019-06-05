@@ -17,7 +17,10 @@
 		2268F634229309400038342B /* CryptoHoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2268F633229309400038342B /* CryptoHoldingCell.swift */; };
 		32DFF2F922A01D6C001D32C4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFF2F822A01D6C001D32C4 /* Utils.swift */; };
 		32DFF2FC22A024D3001D32C4 /* BrowseListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFF2FB22A024D3001D32C4 /* BrowseListCell.swift */; };
-		544DC7E8229E2CA80066E2A8 /* CryptocurrencyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544DC7E7229E2CA80066E2A8 /* CryptocurrencyType.swift */; };
+		544DC7E8229E2CA80066E2A8 /* CurrencyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544DC7E7229E2CA80066E2A8 /* CurrencyData.swift */; };
+		B20EB6C322A721C200D9E75B /* LoginScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B20EB6C222A721C200D9E75B /* LoginScreen.storyboard */; };
+		B20EB6C522A721F700D9E75B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20EB6C422A721F700D9E75B /* LoginViewController.swift */; };
+		B20EB6C722A72F6E00D9E75B /* CurrencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20EB6C622A72F6E00D9E75B /* CurrencyManager.swift */; };
 		D121691B0451C604AE241006 /* Pods_Cryptopia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DCCC89921B497DDEDC742B /* Pods_Cryptopia.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,8 +39,11 @@
 		32DFF2F822A01D6C001D32C4 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		32DFF2FB22A024D3001D32C4 /* BrowseListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseListCell.swift; sourceTree = "<group>"; };
 		32DFF2FD22A03081001D32C4 /* Cryptopia-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cryptopia-Bridging-Header.h"; sourceTree = "<group>"; };
-		544DC7E7229E2CA80066E2A8 /* CryptocurrencyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptocurrencyType.swift; sourceTree = "<group>"; };
+		544DC7E7229E2CA80066E2A8 /* CurrencyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyData.swift; sourceTree = "<group>"; };
 		80FD53DEF98D277C192F91E3 /* Pods-Cryptopia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptopia.release.xcconfig"; path = "Target Support Files/Pods-Cryptopia/Pods-Cryptopia.release.xcconfig"; sourceTree = "<group>"; };
+		B20EB6C222A721C200D9E75B /* LoginScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginScreen.storyboard; sourceTree = "<group>"; };
+		B20EB6C422A721F700D9E75B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B20EB6C622A72F6E00D9E75B /* CurrencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyManager.swift; sourceTree = "<group>"; };
 		D2DCCC89921B497DDEDC742B /* Pods_Cryptopia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptopia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -83,6 +89,7 @@
 				2268F62522916FAB0038342B /* LaunchScreen.storyboard */,
 				2268F62822916FAB0038342B /* Info.plist */,
 				32DFF2FD22A03081001D32C4 /* Cryptopia-Bridging-Header.h */,
+				B20EB6C222A721C200D9E75B /* LoginScreen.storyboard */,
 			);
 			path = Cryptopia;
 			sourceTree = "<group>";
@@ -90,8 +97,9 @@
 		2268F635229309590038342B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				32DFF2FB22A024D3001D32C4 /* BrowseListCell.swift */,
 				2268F633229309400038342B /* CryptoHoldingCell.swift */,
-				544DC7E7229E2CA80066E2A8 /* CryptocurrencyType.swift */,
+				544DC7E7229E2CA80066E2A8 /* CurrencyData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -100,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				32DFF2F822A01D6C001D32C4 /* Utils.swift */,
+				B20EB6C622A72F6E00D9E75B /* CurrencyManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -110,7 +119,7 @@
 				2268F61E22916FAA0038342B /* PortfolioViewController.swift */,
 				2268F62F229174470038342B /* BrowseViewController.swift */,
 				2268F631229174740038342B /* AnalysisViewController.swift */,
-				32DFF2FB22A024D3001D32C4 /* BrowseListCell.swift */,
+				B20EB6C422A721F700D9E75B /* LoginViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,6 +204,7 @@
 			files = (
 				2268F62722916FAB0038342B /* LaunchScreen.storyboard in Resources */,
 				2268F62422916FAB0038342B /* Assets.xcassets in Resources */,
+				B20EB6C322A721C200D9E75B /* LoginScreen.storyboard in Resources */,
 				2268F62222916FAA0038342B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,11 +258,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B20EB6C522A721F700D9E75B /* LoginViewController.swift in Sources */,
 				2268F630229174470038342B /* BrowseViewController.swift in Sources */,
-				544DC7E8229E2CA80066E2A8 /* CryptocurrencyType.swift in Sources */,
+				544DC7E8229E2CA80066E2A8 /* CurrencyData.swift in Sources */,
 				2268F634229309400038342B /* CryptoHoldingCell.swift in Sources */,
 				32DFF2F922A01D6C001D32C4 /* Utils.swift in Sources */,
 				2268F61F22916FAA0038342B /* PortfolioViewController.swift in Sources */,
+				B20EB6C722A72F6E00D9E75B /* CurrencyManager.swift in Sources */,
 				32DFF2FC22A024D3001D32C4 /* BrowseListCell.swift in Sources */,
 				2268F632229174740038342B /* AnalysisViewController.swift in Sources */,
 				2268F61D22916FAA0038342B /* AppDelegate.swift in Sources */,

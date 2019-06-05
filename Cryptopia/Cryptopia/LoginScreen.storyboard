@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zuc-PD-toa">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="MND-ph-txC">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="Zuc-PD-toa" customClass="LoginViewController" customModule="Cryptopia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yKk-6N-3g7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3h-9w-hQF">
+                                <rect key="frame" x="174.5" y="515.5" width="65" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="login:" destination="Zuc-PD-toa" eventType="touchUpInside" id="0Cu-DU-aNF"/>
+                                    <segue destination="dIU-Dh-VLn" kind="showDetail" id="aql-pj-wIi"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="USv-T0-kwo">
+                                <rect key="frame" x="100" y="410.5" width="214" height="75"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CXC-de-Yep">
+                                        <rect key="frame" x="0.0" y="0.0" width="214" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" textContentType="username"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ba-zY-dwv">
+                                        <rect key="frame" x="0.0" y="45" width="214" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Jtt-QR-6TT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="USv-T0-kwo" firstAttribute="centerX" secondItem="yKk-6N-3g7" secondAttribute="centerX" id="FM2-Jy-z7u"/>
+                            <constraint firstItem="rwq-qq-4lJ" firstAttribute="trailing" secondItem="USv-T0-kwo" secondAttribute="trailing" constant="100" id="KzW-vE-SNa"/>
+                            <constraint firstItem="B3h-9w-hQF" firstAttribute="centerX" secondItem="USv-T0-kwo" secondAttribute="centerX" id="Vgk-YU-6q6"/>
+                            <constraint firstItem="Jtt-QR-6TT" firstAttribute="top" secondItem="yKk-6N-3g7" secondAttribute="top" id="Vhx-nf-TYa"/>
+                            <constraint firstAttribute="bottom" secondItem="Jtt-QR-6TT" secondAttribute="bottom" id="bNS-GL-kqR"/>
+                            <constraint firstItem="USv-T0-kwo" firstAttribute="leading" secondItem="rwq-qq-4lJ" secondAttribute="leading" constant="100" id="bop-UY-sl7"/>
+                            <constraint firstItem="B3h-9w-hQF" firstAttribute="top" secondItem="USv-T0-kwo" secondAttribute="bottom" constant="30" id="eGx-7u-bVI"/>
+                            <constraint firstItem="Jtt-QR-6TT" firstAttribute="leading" secondItem="yKk-6N-3g7" secondAttribute="leading" id="gXU-fi-7oM"/>
+                            <constraint firstItem="USv-T0-kwo" firstAttribute="centerY" secondItem="yKk-6N-3g7" secondAttribute="centerY" id="gYS-FA-r06"/>
+                            <constraint firstAttribute="trailing" secondItem="Jtt-QR-6TT" secondAttribute="trailing" id="wQ9-jf-X3x"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rwq-qq-4lJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="UsernameTF" destination="CXC-de-Yep" id="02a-F9-c2j"/>
+                        <outlet property="loginButton" destination="B3h-9w-hQF" id="Eeb-4D-tfl"/>
+                        <outlet property="passwordTF" destination="5ba-zY-dwv" id="dCJ-CK-TNM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k7o-ar-qk8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="180" y="96"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="pZg-eL-b8c">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="dIU-Dh-VLn" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Klc-rN-a5a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762" y="96"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="1563" height="3384"/>
+    </resources>
+</document>
