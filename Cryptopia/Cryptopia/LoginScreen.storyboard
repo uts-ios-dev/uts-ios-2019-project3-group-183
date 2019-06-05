@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3h-9w-hQF">
-                                <rect key="frame" x="174.5" y="515.5" width="65" height="45"/>
+                                <rect key="frame" x="174.5" y="512" width="65" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
@@ -27,16 +27,16 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="USv-T0-kwo">
-                                <rect key="frame" x="100" y="410.5" width="214" height="75"/>
+                                <rect key="frame" x="100" y="414" width="214" height="68"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CXC-de-Yep">
-                                        <rect key="frame" x="0.0" y="0.0" width="214" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CXC-de-Yep">
+                                        <rect key="frame" x="0.0" y="0.0" width="214" height="23"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" textContentType="username"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ba-zY-dwv">
-                                        <rect key="frame" x="0.0" y="45" width="214" height="30"/>
+                                        <rect key="frame" x="0.0" y="38" width="214" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" textContentType="password"/>
@@ -46,11 +46,22 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Jtt-QR-6TT">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="tYf-MS-SmZ">
+                                <rect key="frame" x="50" y="50" width="314" height="314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tYf-MS-SmZ" secondAttribute="height" multiplier="1:1" id="deX-u6-MY7"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="USv-T0-kwo" firstAttribute="top" secondItem="tYf-MS-SmZ" secondAttribute="bottom" constant="50" id="5yT-tI-GL8"/>
+                            <constraint firstItem="tYf-MS-SmZ" firstAttribute="top" secondItem="yKk-6N-3g7" secondAttribute="top" constant="50" id="6hw-ZZ-PYo"/>
                             <constraint firstItem="USv-T0-kwo" firstAttribute="centerX" secondItem="yKk-6N-3g7" secondAttribute="centerX" id="FM2-Jy-z7u"/>
                             <constraint firstItem="rwq-qq-4lJ" firstAttribute="trailing" secondItem="USv-T0-kwo" secondAttribute="trailing" constant="100" id="KzW-vE-SNa"/>
+                            <constraint firstItem="tYf-MS-SmZ" firstAttribute="centerX" secondItem="yKk-6N-3g7" secondAttribute="centerX" id="O2p-Ez-wRE"/>
+                            <constraint firstItem="rwq-qq-4lJ" firstAttribute="trailing" secondItem="tYf-MS-SmZ" secondAttribute="trailing" constant="50" id="PuM-fc-OUa"/>
+                            <constraint firstItem="tYf-MS-SmZ" firstAttribute="leading" secondItem="rwq-qq-4lJ" secondAttribute="leading" constant="50" id="UAj-hY-ThS"/>
                             <constraint firstItem="B3h-9w-hQF" firstAttribute="centerX" secondItem="USv-T0-kwo" secondAttribute="centerX" id="Vgk-YU-6q6"/>
                             <constraint firstItem="Jtt-QR-6TT" firstAttribute="top" secondItem="yKk-6N-3g7" secondAttribute="top" id="Vhx-nf-TYa"/>
                             <constraint firstAttribute="bottom" secondItem="Jtt-QR-6TT" secondAttribute="bottom" id="bNS-GL-kqR"/>
@@ -70,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k7o-ar-qk8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="180" y="96"/>
+            <point key="canvasLocation" x="179.71014492753625" y="95.758928571428569"/>
         </scene>
         <!--Main-->
         <scene sceneID="pZg-eL-b8c">
@@ -83,5 +94,6 @@
     </scenes>
     <resources>
         <image name="Background" width="1563" height="3384"/>
+        <image name="Icon" width="1024" height="1024"/>
     </resources>
 </document>
