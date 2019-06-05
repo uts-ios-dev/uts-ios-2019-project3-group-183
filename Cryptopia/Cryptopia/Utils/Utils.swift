@@ -10,29 +10,29 @@ import UIKit
 
 class Utils: NSObject {
     
-    //金钱格式化
+    //initialize the money
     static func decimalMoney(money:Float)-> String {
-        //初始化NumberFormatter@
+        //initialize NumberFormatter@
         let format = NumberFormatter()
-        //设置numberStyle（有多种格式）
+        //set numberStyle（there have a lot of style）
         format.numberStyle = .currency
-        //转换后的string
+        //transfer string
         let str:String = format.string(from: NSNumber(value: money)) ?? ""
         return str
     }
     
-    //金钱格式化
+    //money initialization 
     static func decimalMoneyWithUnit(money:Float)-> String {
         var tempMoney = money;
         if money > 1000000.00 {
             tempMoney = money/1000000.00
         }
         
-        //初始化NumberFormatter@U
+        //initialize NumberFormatter@U
         let format = NumberFormatter()
-        //设置numberStyle（有多种格式）
+        //set numberStyle
         format.numberStyle = .currency
-        //转换后的string
+        //tansfer string
         let str:String = format.string(from: NSNumber(value: tempMoney)) ?? ""
         
         return str+"B"
