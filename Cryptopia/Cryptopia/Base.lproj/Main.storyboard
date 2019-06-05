@@ -298,20 +298,19 @@
                                     <constraint firstItem="zLp-TG-3qZ" firstAttribute="leading" secondItem="FDU-68-KII" secondAttribute="leading" constant="8" id="mcs-rk-eBW"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AuG-8l-Yd3">
-                                <rect key="frame" x="0.0" y="114" width="414" height="699"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                            </scrollView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prediction" translatesAutoresizingMaskIntoConstraints="NO" id="oKY-3x-SOf">
+                                <rect key="frame" x="10" y="162.5" width="394" height="571"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="FDU-68-KII" firstAttribute="leading" secondItem="PX7-gc-oHU" secondAttribute="leading" id="2rz-pU-gs9"/>
                             <constraint firstItem="FDU-68-KII" firstAttribute="top" secondItem="PX7-gc-oHU" secondAttribute="top" id="419-QS-d8U"/>
-                            <constraint firstItem="AuG-8l-Yd3" firstAttribute="top" secondItem="FDU-68-KII" secondAttribute="bottom" id="EAw-A1-eFI"/>
+                            <constraint firstAttribute="trailing" secondItem="oKY-3x-SOf" secondAttribute="trailing" constant="10" id="DLh-sL-Qww"/>
                             <constraint firstItem="FDU-68-KII" firstAttribute="trailing" secondItem="PX7-gc-oHU" secondAttribute="trailing" id="MKB-6a-Qe9"/>
-                            <constraint firstItem="AuG-8l-Yd3" firstAttribute="trailing" secondItem="PX7-gc-oHU" secondAttribute="trailing" id="Odx-LU-ngt"/>
-                            <constraint firstItem="AuG-8l-Yd3" firstAttribute="leading" secondItem="PX7-gc-oHU" secondAttribute="leading" id="ch2-0M-OTq"/>
-                            <constraint firstItem="AuG-8l-Yd3" firstAttribute="bottom" secondItem="PX7-gc-oHU" secondAttribute="bottom" id="jPg-1d-xlh"/>
+                            <constraint firstItem="oKY-3x-SOf" firstAttribute="leading" secondItem="hRj-hl-GEW" secondAttribute="leading" constant="10" id="Okb-XY-gm2"/>
+                            <constraint firstItem="oKY-3x-SOf" firstAttribute="centerX" secondItem="hRj-hl-GEW" secondAttribute="centerX" id="o0n-Hq-Nbj"/>
+                            <constraint firstItem="oKY-3x-SOf" firstAttribute="centerY" secondItem="hRj-hl-GEW" secondAttribute="centerY" id="ytr-0q-tto"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PX7-gc-oHU"/>
                     </view>
@@ -319,12 +318,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ul3-OC-TbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2319" y="139"/>
+            <point key="canvasLocation" x="2318.840579710145" y="138.61607142857142"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Gf4-Uu-Q7Z">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="MF6-R4-Hhu" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="UITabBarController" automaticallyAdjustsScrollViewInsets="NO" id="MF6-R4-Hhu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="f2J-Pp-Udn">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -346,5 +345,6 @@
         <image name="combo_chart" width="30" height="30"/>
         <image name="home" width="30" height="30"/>
         <image name="paper_money" width="30" height="30"/>
+        <image name="prediction" width="1075" height="571"/>
     </resources>
 </document>
